@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+
+<!-- TheatroLabs commands grammar v0.4 -->
+
+<grammar xmlns="http://www.w3.org/2001/06/grammar"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.w3.org/2001/06/grammar
+                             http://www.w3.org/TR/speech-grammar/grammar.xsd"
+         xml:lang="en" version="1.0"
+         root="locations"
+         mode="voice"
+         tag-format="semantics/1.0">
+
+<rule id="locations" scope="public">
+	<one-of>
+		<item>Registers<tag>out="Registers"</tag></item>
+		<item>Break Room<tag>out="Break Room"</tag></item>
+		<item>Towels<tag>out="Towels"</tag></item>
+	</one-of>
+</rule>
+
+</grammar>

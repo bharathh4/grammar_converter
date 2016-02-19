@@ -1,0 +1,135 @@
+<?xml version="1.0"?>
+
+<!-- TheatroLabs commands grammar v0.5 -->
+
+<grammar xmlns="http://www.w3.org/2001/06/grammar"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.w3.org/2001/06/grammar
+                             http://www.w3.org/TR/speech-grammar/grammar.xsd"
+         xml:lang="en" version="1.0"
+         root="command"
+         mode="voice"
+         tag-format="semantics/1.0">
+
+<rule id="command">
+   <one-of>
+      <item><ruleref uri="#hello" /></item>
+      <item><ruleref uri="#logoff" /></item>
+      <item><ruleref uri="#identify" /></item>
+      <item><ruleref uri="#time" /></item>
+      <item><ruleref uri="#eartraining" /></item>
+   </one-of>
+   <tag>out=rules.latest()</tag>
+</rule>
+
+<rule id="eartraining">
+        <item>
+                ear training                
+</item>
+<tag>out="eartraining"</tag>
+</rule>
+
+<rule id="hello">
+  <item>
+    <one-of>
+        <item>hello<ruleref uri="persons_loggedon.grxml"/></item>
+        <item>hey<ruleref uri="persons_loggedon.grxml"/></item>
+        <item>hi<ruleref uri="persons_loggedon.grxml"/></item>
+    </one-of>
+    <tag>out="Hello,"+rules.latest()</tag>
+  </item>
+</rule>
+
+<rule id="logoff">
+  <one-of>
+      <item>log off<tag>out="logoff"</tag></item>
+      <item>log me off<tag>out="logoff"</tag></item>
+      <item>log out<tag>out="logoff"</tag></item>
+  </one-of>
+</rule>
+
+<rule id="identify">
+        <item>Identify</item>
+        <item repeat="0-1">User</item>
+        <tag>out="Identify"</tag>
+</rule>
+
+<rule id="time">
+        <one-of>
+                <item>What time is it</item>
+                <item>Time</item>
+    </one-of>
+    <tag>out="time"</tag>
+</rule>
+
+<rule id="id_numbers">
+<one-of>
+    <item>3 8 4 2 3<tag>out="andrea saenz"</tag></item>
+    <item>2 5 8 9 9<tag>out="annissa hicks"</tag></item>
+    <item>3 7 5 3 5<tag>out="brandie morel"</tag></item>
+    <item>3 3 8 2 2<tag>out="chelsea kot"</tag></item>
+    <item>3 8 9 8 9<tag>out="cielle ritterfinch"</tag></item>
+    <item>3 9 4 9 0<tag>out="cyndy dwyer"</tag></item>
+    <item>2 3 5 3 8<tag>out="david starnes"</tag></item>
+    <item>0 9 0 5 1<tag>out="deborah king"</tag></item>
+    <item>3 8 4 0 7<tag>out="delia flores"</tag></item>
+    <item>3 8 8 0 8<tag>out="diana orozco"</tag></item>
+    <item>3 9 4 2 4<tag>out="durrell washington"</tag></item>
+    <item>3 4 9 8 9<tag>out="elizabeth hunter"</tag></item>
+    <item>0 3 0 0 9<tag>out="ellen jacobs"</tag></item>
+    <item>3 8 7 5 5<tag>out="elliot kern"</tag></item>
+    <item>3 9 1 2 2<tag>out="emily moore"</tag></item>
+    <item>1 3 3 1 1<tag>out="emily wynn"</tag></item>
+    <item>0 3 3 4 9<tag>out="gary frump"</tag></item>
+    <item>3 9 6 9 6<tag>out="jackie cannon"</tag></item>
+    <item>3 6 2 2 7<tag>out="jane lightfoot"</tag></item>
+    <item>3 5 4 2 1<tag>out="janet harris"</tag></item>
+    <item>3 8 7 1 2<tag>out="janet shadlow"</tag></item>
+    <item>3 9 3 9 8<tag>out="jennifer flores"</tag></item>
+    <item>2 1 8 7 4<tag>out="jenny hannahchambers"</tag></item>
+    <item>3 2 6 1 5<tag>out="jenny horn"</tag></item>
+    <item>0 0 8 1 9<tag>out="jinnifer koger"</tag></item>
+    <item>3 9 2 0 5<tag>out="john garrett"</tag></item>
+    <item>3 6 0 4 3<tag>out="karen adams"</tag></item>
+    <item>3 7 5 8 7<tag>out="kate fullilove"</tag></item>
+    <item>0 8 3 2 2<tag>out="keith gudat"</tag></item>
+    <item>2 8 5 4 5<tag>out="ken turner"</tag></item>
+    <item>3 5 8 7 7<tag>out="kim ochnser"</tag></item>
+    <item>0 5 2 8 1<tag>out="ko orsak"</tag></item>
+    <item>3 8 4 4 4<tag>out="kristie nguyen"</tag></item>
+    <item>3 8 0 6 8<tag>out="kristin crumpler"</tag></item>
+    <item>3 9 5 2 4<tag>out="kristopher howell"</tag></item>
+    <item>2 1 7 5 0<tag>out="lacy cannaday"</tag></item>
+    <item>0 4 8 4 4<tag>out="laura derus"</tag></item>
+    <item>2 9 1 0 8<tag>out="laura valdez"</tag></item>
+    <item>1 1 5 7 0<tag>out="laurie terlaak"</tag></item>
+    <item>3 6 2 9 6<tag>out="lisa rossi"</tag></item>
+    <item>3 9 7 1 3<tag>out="lisa medina"</tag></item>
+    <item>2 5 8 4 7<tag>out="martha cole"</tag></item>
+    <item>1 8 4 4 2<tag>out="maryalice lantz"</tag></item>
+    <item>0 4 1 4 6<tag>out="mike rudzki"</tag></item>
+    <item>3 5 3 5 3<tag>out="michelle breaux"</tag></item>
+    <item>3 0 5 6 4<tag>out="mollie kirby"</tag></item>
+    <item>3 9 6 8 5<tag>out="nona rogers"</tag></item>
+    <item>0 5 0 0 6<tag>out="otis fields"</tag></item>
+    <item>3 5 1 7 1<tag>out="trish randall"</tag></item>
+    <item>3 9 2 1 6<tag>out="ranitra johnson"</tag></item>
+    <item>3 8 8 6 5<tag>out="rich wiethoff"</tag></item>
+    <item>0 7 2 6 3<tag>out="robert oliason"</tag></item>
+    <item>1 6 1 4 7<tag>out="robin beger"</tag></item>
+    <item>3 9 3 9 4<tag>out="sam dodd"</tag></item>
+    <item>3 2 7 2 1<tag>out="sarah siller"</tag></item>
+    <item>3 1 8 3 5<tag>out="sean nayebioskoui"</tag></item>
+    <item>3 9 4 0 6<tag>out="serena smith"</tag></item>
+    <item>1 7 3 9 4<tag>out="shannon mccarty"</tag></item>
+    <item>3 6 0 4 0<tag>out="sharon beasley"</tag></item>
+    <item>3 7 4 7 1<tag>out="shelbi goodman"</tag></item>
+    <item>3 6 0 3 7<tag>out="steve balak"</tag></item>
+    <item>3 9 2 1 8<tag>out="stephen morris"</tag></item>
+    <item>3 1 1 7 3<tag>out="sylvia wilkie"</tag></item>
+    <item>3 8 9 6 0<tag>out="victoria pilat"</tag></item>
+    <item>3 3 5 3 5<tag>out="kathleen yoder"</tag></item>
+    <item>1 3 9 7 0<tag>out="bonnie garza"</tag></item>
+</one-of>
+</rule>
+</grammar>

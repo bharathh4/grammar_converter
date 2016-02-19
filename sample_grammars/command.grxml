@@ -1,0 +1,361 @@
+<?xml version="1.0"?>
+
+<!-- TheatroLabs commands grammar v0.5 -->
+
+<grammar xmlns="http://www.w3.org/2001/06/grammar"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.w3.org/2001/06/grammar
+                             http://www.w3.org/TR/speech-grammar/grammar.xsd"
+         xml:lang="en" version="1.0"
+         root="command"
+         mode="voice"
+         tag-format="semantics/1.0">
+
+<rule id="command">
+	<one-of>
+		<item><ruleref uri="#announcement" /></item>
+		<item weight="10"><ruleref uri="#hello" /></item>
+		<item><ruleref uri="#interrupt" /></item>
+		<item><ruleref uri="#interruptall" /></item>
+		<item><ruleref uri="#message" /></item>
+		<item><ruleref uri="#whereis" /></item>
+		<item><ruleref uri="#logon" /></item>
+		<item><ruleref uri="#logoff" /></item>
+		<item><ruleref uri="#logoffuser" /></item>
+		<item><ruleref uri="#storecoverage" /></item>
+		<item><ruleref uri="#identify" /></item>
+		<item><ruleref uri="#near" /></item>			
+		<item><ruleref uri="#eartraining" /></item>
+		<item><ruleref uri="#connection" /></item>
+        <item><ruleref uri="#groupmessage" /></item>
+      	<item><ruleref uri="#groupannouncement" /></item>
+		<item><ruleref uri="#groupadd" /></item>
+		<item><ruleref uri="#groupdelete" /></item>
+        <item><ruleref uri="#addtogroup" /></item>
+        <item><ruleref uri="#deletefromgroup" /></item>
+		<item><ruleref uri="#whosgroup" /></item>
+		<item><ruleref uri="#groupmembership" /></item>
+		<item><ruleref uri="#listgroups" /></item>
+		<item><ruleref uri="#groupinterrupt" /></item>
+        <item><ruleref uri="#time" /></item>
+        <item><ruleref uri="#registerbackup" /></item>
+        <item><ruleref uri="#igotit" /></item>
+        <item><ruleref uri="#playmessages" /></item>
+        <item><ruleref uri="#playannouncements" /></item>
+        <item><ruleref uri="#recordhuddle" /></item>
+        <item><ruleref uri="#broadcast" /></item>
+	</one-of>
+	<tag>out=rules.latest()</tag>
+</rule>
+
+<rule id="addtogroup">
+    <item>add</item>  
+    <item><ruleref uri="persons.grxml"/></item>
+    <tag>out = 'addtogroup,' + rules.latest()</tag>
+   	<item repeat="0-1">
+			to
+	</item>
+    <item><ruleref uri="#groups"/></item>
+    <item repeat="0-1">
+			group
+	</item>
+    <tag>out += ',' + rules.latest()</tag>
+</rule>
+
+<rule id="deletefromgroup">
+	<one-of>
+		<item>delete</item>
+		<item>remove</item>
+	</one-of>
+    <item><ruleref uri="persons.grxml"/></item>
+    <tag>out = 'deletefromgroup,' + rules.latest()</tag>
+   	<item repeat="0-1">
+			from
+	</item>
+    <item><ruleref uri="#groups"/></item>
+    <item repeat="0-1">
+			group
+	</item>
+    <tag>out += ',' + rules.latest()</tag>
+</rule>
+
+
+<rule id="announcement">
+	<item>
+		Announcement
+		<one-of>
+			<item>Today<tag>out="AnnouncementToday"</tag></item>
+			<item>Now<tag>out="AnnouncementNow"</tag></item>
+			<item>Hour<tag>out="AnnouncementHour"</tag></item>
+		</one-of>
+	</item>
+</rule>
+
+<rule id="eartraining">
+	<item>
+		ear training
+	</item>
+	<tag>out="eartraining"</tag>
+</rule>
+
+<rule id="hello">
+	<one-of>
+		<item>hello</item>
+		<item>hey</item>
+		<item>hi</item>
+		<item>call</item>
+	</one-of>
+
+	<ruleref uri="persons.grxml"/>
+	<tag>out="Hello,"+rules.latest()</tag>
+</rule>
+
+<rule id="interrupt">
+	<item>interrupt</item>
+	<item><ruleref uri="persons.grxml"/></item>
+	<tag>out="Interrupt,"+rules.latest()</tag>
+</rule>
+
+<rule id="interruptall">
+	<item>
+		interrupt all
+	</item>
+	<tag>out="urgentbulletin"</tag>
+</rule>
+
+
+<rule id="playmessages">
+	<item>
+		Play Messages
+	</item>
+	<tag>out="PlayMessages"</tag>
+</rule>
+
+<rule id="playannouncements">
+	<item>
+		Play Announcements
+	</item>
+	<tag>out="PlayAnnouncements"</tag>
+</rule>
+
+<rule id="recordhuddle">
+	<item>
+		Record Huddle
+	</item>
+	<tag>out="recordhuddle"</tag>
+</rule>
+
+<rule id="broadcast">
+	<item>broadcast</item>
+	<item><ruleref uri="groups.grxml"/></item>
+	<tag>out="Broadcast,"+rules.latest()</tag>
+</rule>
+
+<rule id="message">
+	<item>
+		message
+		<item repeat="0-1">
+			for
+		</item>
+	</item>
+	<item><ruleref uri="persons.grxml"/></item>
+	<tag>out="Message,"+rules.latest()</tag>
+</rule>
+
+<rule id="whereis">
+	<one-of>
+		<item> where is </item>
+		<item> locate </item>
+  	</one-of>
+	<item><ruleref uri="persons.grxml"/></item>
+	<tag>out="Whereis,"+rules.latest()</tag>
+</rule>
+
+<rule id="logon">
+	<item>
+		Log 
+		<item>
+			<one-of>
+				<item>on</item>
+				<item>in</item>                                        
+                          </one-of>
+                          </item>
+	</item>
+	<item><ruleref uri="persons.grxml"/></item>
+	<tag>out="Logon,"+rules.latest()</tag>
+</rule>
+
+<rule id="logoff">
+	<one-of>
+		<item>Log off system</item>
+		<item>Log me off</item>
+		<item>Logout</item>
+	</one-of>
+	<tag>out="Logoff"</tag>
+</rule>
+
+<rule id="logoffuser">
+	<item>Log off</item>
+	<item><ruleref uri="persons.grxml"/></item>
+	<tag>out="Logoff"</tag>
+</rule>
+
+<rule id="storecoverage">
+	<item repeat="0-1">Store</item>
+	<item>Coverage</item>
+	<tag>out="Coverage"</tag>
+</rule>
+
+<rule id="identify">
+	<item>Identify</item>
+	<item repeat="0-1">User</item>
+	<tag>out="Identify"</tag>
+</rule>
+
+<rule id="near">
+	<one-of>
+		<item>
+			<item repeat="0-1">Is</item>
+			<item>Anyone near</item>
+		</item>
+		<item>
+			Who's near
+		</item>
+		<item>
+			Who is near
+		</item>
+	</one-of>
+	<item><ruleref uri="#locations"/></item>
+	<tag>out="Near,"+rules.latest()</tag>
+</rule>
+
+<rule id="connection">
+	<one-of>
+		<item>connection</item>
+		<item>hello</item>
+	</one-of>
+	<item><ruleref uri="#groups"/></item>
+	<tag>out="hello,"+rules.latest()</tag>;
+</rule>
+
+<rule id="groupinterrupt">
+	<item>
+		interrupt
+		<item repeat="0-1">
+			for
+		</item>
+	</item>
+	<item><ruleref uri="#groups"/></item>
+	<tag>out="Interrupt,"+rules.latest()</tag>
+</rule>
+
+<rule id="groupmessage">
+	<item>
+		message
+		<item repeat="0-1">
+			for
+		</item>
+	</item>
+	<item><ruleref uri="#groups"/></item>
+	<tag>out="Message,"+rules.latest()</tag>
+</rule>
+
+<rule id="groupannouncement">
+   <item>
+      Announcement
+      <one-of>
+         <item>Today<tag>out="AnnouncementToday"</tag></item>
+         <item>Now<tag>out="AnnouncementNow"</tag></item>
+         <item>Hour<tag>out="AnnouncementHour"</tag></item>
+      </one-of> 
+      <item repeat="0-1">
+         for
+      </item>
+   </item>
+   <item><ruleref uri="#groups"/></item>
+   <tag>out += ',' + rules.latest()</tag>
+</rule>
+
+<rule id="whosgroup">
+	<item>
+		who is in
+		<item repeat="0-1">
+			group
+		</item>
+	</item>
+	<item><ruleref uri="#groups"/></item>
+	<tag>out="Whosgroup,"+rules.latest()</tag>
+</rule>
+
+<rule id="groupmembership">
+	<item>group membership</item>
+	<tag>out="groupmembership"</tag>
+</rule>
+
+<rule id="listgroups">
+	<item>groups</item>
+	<tag>out="listgroups"</tag>
+</rule>
+
+<rule id="groupadd">
+	<item>
+		add me
+		<item repeat="0-1">
+			to
+		</item>
+	</item>
+	<item><ruleref uri="#groups"/></item>
+	<tag>out="Addto,"+rules.latest()</tag>
+</rule>
+
+<rule id="groupdelete">
+	<one-of>
+		<item>delete me</item>
+		<item>remove me</item>
+		<item repeat="0-1">
+			from
+		</item>
+	</one-of>
+	<item><ruleref uri="#groups"/></item>
+	<tag>out="Deletefrom,"+rules.latest()</tag>
+</rule>
+
+<rule id="time">
+	<one-of>
+		<item>What time is it</item>
+		<item>Time</item>
+	</one-of>
+	<tag>out="time"</tag>
+</rule>
+
+<rule id="registerbackup">
+    <one-of>
+	    <item>cash register backup</item>
+ 	    <item>register backup</item>
+    </one-of>
+	<tag>out="register backup"</tag>
+</rule>
+
+<rule id="igotit">
+    <one-of>
+	    <item>i have it</item>
+ 	    <item>i got it</item>
+ 	    <item>i have got it</item>
+ 	    <item>on the way</item>
+ 	    <item>i am on the way</item>
+        <item>i'm on the way</item>
+    </one-of>
+	<tag>out="i got it"</tag>
+</rule>
+
+<rule id="locations">
+	<ruleref uri="locations.grxml"/>
+	<tag>out=rules.latest();</tag>
+</rule>
+
+<rule id="groups">
+	<ruleref uri="groups.grxml"/>
+	<tag>out=rules.latest();</tag>
+</rule>
+
+</grammar>

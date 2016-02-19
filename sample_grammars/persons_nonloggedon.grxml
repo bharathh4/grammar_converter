@@ -1,0 +1,639 @@
+<?xml version="1.0" encoding="utf-8"?>
+<grammar xmlns="http://www.w3.org/2001/06/grammar" root="persons" tag-format="semantics/1.0" xml:lang="en" version="1.0" mode="voice" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/06/grammar http://www.w3.org/TR/speech-grammar/grammar.xsd">
+<lexicon uri="theatro-lexicon-names.xml?type=backup"/>
+<rule scope="public" id="persons">
+    <one-of>
+      <item><ruleref uri="#andreasaenz"/></item>
+      <item><ruleref uri="#annissahicks"/></item>
+      <item><ruleref uri="#aprilnemley"/></item>
+      <item><ruleref uri="#bobfoster"/></item>
+      <item><ruleref uri="#bonniegarza"/></item>
+      <item><ruleref uri="#brandiemorel"/></item>
+      <item><ruleref uri="#burthiabooker"/></item>
+      <item><ruleref uri="#chelseakot"/></item>
+      <item><ruleref uri="#christodd"/></item>
+      <item><ruleref uri="#cielleritterfinch"/></item>
+      <item><ruleref uri="#claudeleasure"/></item>
+      <item><ruleref uri="#cyndydwyer"/></item>
+      <item><ruleref uri="#danielleboissatt"/></item>
+      <item><ruleref uri="#daniellederbes"/></item>
+      <item><ruleref uri="#davidstarnes"/></item>
+      <item><ruleref uri="#deborahking"/></item>
+      <item><ruleref uri="#dianaorozco"/></item>
+      <item><ruleref uri="#durrellwashington"/></item>
+      <item><ruleref uri="#elizabethhunter"/></item>
+      <item><ruleref uri="#ellenjacobs"/></item>
+      <item><ruleref uri="#emilymoore"/></item>
+      <item><ruleref uri="#emilywynne"/></item>
+      <item><ruleref uri="#everestkramer"/></item>
+      <item><ruleref uri="#garyfrump"/></item>
+      <item><ruleref uri="#janetharris"/></item>
+      <item><ruleref uri="#jenniferflores"/></item>
+      <item><ruleref uri="#jennyhannahchambers"/></item>
+      <item><ruleref uri="#jennyhorne"/></item>
+      <item><ruleref uri="#jessicascottnairns"/></item>
+      <item><ruleref uri="#jinniferkoger"/></item>
+      <item><ruleref uri="#johngarrett"/></item>
+      <item><ruleref uri="#johnnorman"/></item>
+      <item><ruleref uri="#jordonpurcell"/></item>
+      <item><ruleref uri="#karenadams"/></item>
+      <item><ruleref uri="#katefullilove"/></item>
+      <item><ruleref uri="#kathleenyoder"/></item>
+      <item><ruleref uri="#keithgudat"/></item>
+      <item><ruleref uri="#kenturner"/></item>
+      <item><ruleref uri="#kimochsner"/></item>
+      <item><ruleref uri="#koorsak"/></item>
+      <item><ruleref uri="#krishowell"/></item>
+      <item><ruleref uri="#lacycannaday"/></item>
+      <item><ruleref uri="#lauraderus"/></item>
+      <item><ruleref uri="#lauravaldez"/></item>
+      <item><ruleref uri="#laurieterlaak"/></item>
+      <item><ruleref uri="#lisamedina"/></item>
+      <item><ruleref uri="#lisarossi"/></item>
+      <item><ruleref uri="#marthacole"/></item>
+      <item><ruleref uri="#maryalicelantz"/></item>
+      <item><ruleref uri="#michellebreaux"/></item>
+      <item><ruleref uri="#mikerudzki"/></item>
+      <item><ruleref uri="#molliekirby"/></item>
+      <item><ruleref uri="#morganmcgrath"/></item>
+      <item><ruleref uri="#nonarogers"/></item>
+      <item><ruleref uri="#obifrancekramer"/></item>
+      <item><ruleref uri="#otisfields"/></item>
+      <item><ruleref uri="#patrickfitzgerald"/></item>
+      <item><ruleref uri="#ranitrajohnson"/></item>
+      <item><ruleref uri="#richwiethoff"/></item>
+      <item><ruleref uri="#ricodunnigan"/></item>
+      <item><ruleref uri="#robertoliason"/></item>
+      <item><ruleref uri="#robinbeger"/></item>
+      <item><ruleref uri="#roscoekramer"/></item>
+      <item><ruleref uri="#sarahsiller"/></item>
+      <item><ruleref uri="#seannayebioskoui"/></item>
+      <item><ruleref uri="#serenasmith"/></item>
+      <item><ruleref uri="#shannonmccarty"/></item>
+      <item><ruleref uri="#shelbigoodman"/></item>
+      <item><ruleref uri="#stephenmorris"/></item>
+      <item><ruleref uri="#stevebalak"/></item>
+      <item><ruleref uri="#sylviawilkie"/></item>
+      <item><ruleref uri="#teddykramer"/></item>
+      <item><ruleref uri="#theatrotechsupport"/></item>
+      <item><ruleref uri="#trishrandall"/></item>
+      <item><ruleref uri="#mikemendoza"/></item>
+      <item><ruleref uri="#rebeccahgarcia"/></item>
+      <item><ruleref uri="#cindysroufe"/></item>
+      <item><ruleref uri="#patgasiorowski"/></item>
+    </one-of>
+ <tag>out=rules.latest();</tag>
+</rule>
+<rule id="andreasaenz">
+    <item>
+      <item>andrea</item>
+      <item repeat="0-1">saenz</item>
+    </item>
+    <tag>out="andrea saenz"</tag>
+</rule>
+<rule id="annissahicks">
+    <item>
+      <item>annissa</item>
+      <item repeat="0-1">hicks</item>
+    </item>
+    <tag>out="annissa hicks"</tag>
+</rule>
+<rule id="aprilnemley">
+    <item>
+      <item>april</item>
+      <item repeat="0-1">nemley</item>
+    </item>
+    <tag>out="april nemley"</tag>
+</rule>
+<rule id="bobfoster">
+    <item>
+      <item>bob</item>
+      <item repeat="0-1">foster</item>
+    </item>
+    <tag>out="bob foster"</tag>
+</rule>
+<rule id="bonniegarza">
+    <item>
+      <item>bonnie</item>
+      <item repeat="0-1">garza</item>
+    </item>
+    <tag>out="bonnie garza"</tag>
+</rule>
+<rule id="brandiemorel">
+    <item>
+      <item>brandie</item>
+      <item repeat="0-1">morel</item>
+    </item>
+    <tag>out="brandie morel"</tag>
+</rule>
+<rule id="burthiabooker">
+    <item>
+      <item>burthia</item>
+      <item repeat="0-1">booker</item>
+    </item>
+    <tag>out="burthia booker"</tag>
+</rule>
+<rule id="chelseakot">
+    <item>
+      <item>chelsea</item>
+      <item repeat="0-1">kot</item>
+    </item>
+    <tag>out="chelsea kot"</tag>
+</rule>
+<rule id="christodd">
+    <item>
+      <item>chris</item>
+      <item>todd</item>
+    </item>
+    <tag>out="chris todd"</tag>
+</rule>
+<rule id="cielleritterfinch">
+    <item>
+      <item>cielle</item>
+      <item repeat="0-1">ritterfinch</item>
+    </item>
+    <tag>out="cielle ritterfinch"</tag>
+</rule>
+<rule id="claudeleasure">
+    <item>
+      <item>claude</item>
+      <item repeat="0-1">leasure</item>
+    </item>
+    <tag>out="claude leasure"</tag>
+</rule>
+<rule id="cyndydwyer">
+    <item>
+      <item>cyndy</item>
+      <item repeat="0-1">dwyer</item>
+    </item>
+    <tag>out="cyndy dwyer"</tag>
+</rule>
+<rule id="danielleboissatt">
+    <item>
+      <item>danielle</item>
+      <item repeat="0-1">boissatt</item>
+    </item>
+    <tag>out="danielle boissatt"</tag>
+</rule>
+<rule id="daniellederbes">
+    <item>
+      <item>danielle</item>
+      <item>derbes</item>
+    </item>
+    <tag>out="danielle derbes"</tag>
+</rule>
+<rule id="davidstarnes">
+    <item>
+      <item>david</item>
+      <item repeat="0-1">starnes</item>
+    </item>
+    <tag>out="david starnes"</tag>
+</rule>
+<rule id="deborahking">
+    <item>
+      <item>deborah</item>
+      <item repeat="0-1">king</item>
+    </item>
+    <tag>out="deborah king"</tag>
+</rule>
+<rule id="dianaorozco">
+    <item>
+      <item>diana</item>
+      <item repeat="0-1">orozco</item>
+    </item>
+    <tag>out="diana orozco"</tag>
+</rule>
+<rule id="durrellwashington">
+    <item>
+      <item>durrell</item>
+      <item>washington</item>
+    </item>
+    <tag>out="durrell washington"</tag>
+</rule>
+<rule id="elizabethhunter">
+    <item>
+      <item>elizabeth</item>
+      <item repeat="0-1">hunter</item>
+    </item>
+    <tag>out="elizabeth hunter"</tag>
+</rule>
+<rule id="ellenjacobs">
+    <item>
+      <item>ellen</item>
+      <item repeat="0-1">jacobs</item>
+    </item>
+    <tag>out="ellen jacobs"</tag>
+</rule>
+<rule id="emilymoore">
+    <item>
+      <item>emily</item>
+      <item>moore</item>
+    </item>
+    <tag>out="emily moore"</tag>
+</rule>
+<rule id="emilywynne">
+    <item>
+      <item>emily</item>
+      <item repeat="0-1">wynne</item>
+    </item>
+    <tag>out="emily wynne"</tag>
+</rule>
+<rule id="everestkramer">
+    <item>
+      <item>everest</item>
+      <item repeat="0-1">kramer</item>
+    </item>
+    <tag>out="everest kramer"</tag>
+</rule>
+<rule id="garyfrump">
+    <item>
+      <item>gary</item>
+      <item repeat="0-1">frump</item>
+    </item>
+    <tag>out="gary frump"</tag>
+</rule>
+<rule id="janetharris">
+    <item>
+      <item>janet</item>
+      <item repeat="0-1">harris</item>
+    </item>
+    <tag>out="janet harris"</tag>
+</rule>
+<rule id="jenniferflores">
+    <item>
+      <item>jennifer</item>
+      <item repeat="0-1">flores</item>
+    </item>
+    <tag>out="jennifer flores"</tag>
+</rule>
+<rule id="jennyhannahchambers">
+    <item>
+      <item>jenny</item>
+      <item>hannahchambers</item>
+    </item>
+    <tag>out="jenny hannahchambers"</tag>
+</rule>
+<rule id="jennyhorne">
+    <item>
+      <item>jenny</item>
+      <item repeat="0-1">horne</item>
+    </item>
+    <tag>out="jenny horne"</tag>
+</rule>
+<rule id="jessicascottnairns">
+    <item>
+      <item>jessica</item>
+      <item repeat="0-1">scottnairns</item>
+    </item>
+    <tag>out="jessica scottnairns"</tag>
+</rule>
+<rule id="jinniferkoger">
+    <item>
+      <item>jinnifer</item>
+      <item>koger</item>
+    </item>
+    <tag>out="jinnifer koger"</tag>
+</rule>
+<rule id="johngarrett">
+    <item>
+      <item>john</item>
+      <item repeat="0-1">garrett</item>
+    </item>
+    <tag>out="john garrett"</tag>
+</rule>
+<rule id="johnnorman">
+    <item>
+      <item>john</item>
+      <item>norman</item>
+    </item>
+    <tag>out="john norman"</tag>
+</rule>
+<rule id="jordonpurcell">
+    <item>
+      <item>jordon</item>
+      <item>purcell</item>
+    </item>
+    <tag>out="jordon purcell"</tag>
+</rule>
+<rule id="karenadams">
+    <item>
+      <item>karen</item>
+      <item repeat="0-1">adams</item>
+    </item>
+    <tag>out="karen adams"</tag>
+</rule>
+<rule id="katefullilove">
+    <item>
+      <item>kate</item>
+      <item repeat="0-1">fullilove</item>
+    </item>
+    <tag>out="kate fullilove"</tag>
+</rule>
+<rule id="kathleenyoder">
+    <item>
+      <item>kathleen</item>
+      <item repeat="0-1">yoder</item>
+    </item>
+    <tag>out="kathleen yoder"</tag>
+</rule>
+<rule id="keithgudat">
+    <item>
+      <item>keith</item>
+      <item repeat="0-1">gudat</item>
+    </item>
+    <tag>out="keith gudat"</tag>
+</rule>
+<rule id="kenturner">
+    <item>
+      <item>ken</item>
+      <item>turner</item>
+    </item>
+    <tag>out="ken turner"</tag>
+</rule>
+<rule id="kimochsner">
+    <item>
+      <item>kim</item>
+      <item repeat="0-1">ochsner</item>
+    </item>
+    <tag>out="kim ochsner"</tag>
+</rule>
+<rule id="koorsak">
+    <item>
+      <one-of>
+        <item>ko</item>
+        <item>k o</item>
+      </one-of>
+      <item repeat="0-1">orsak</item>
+    </item>
+    <tag>out="ko orsak"</tag>
+</rule>
+<rule id="krishowell">
+    <item>
+      <item>kris</item>
+      <item repeat="0-1">howell</item>
+    </item>
+    <tag>out="kris howell"</tag>
+</rule>
+<rule id="lacycannaday">
+    <item>
+      <item>lacy</item>
+      <item repeat="0-1">cannaday</item>
+    </item>
+    <tag>out="lacy cannaday"</tag>
+</rule>
+<rule id="lauraderus">
+    <item>
+      <item>laura</item>
+      <item repeat="0-1">derus</item>
+    </item>
+    <tag>out="laura derus"</tag>
+</rule>
+<rule id="lauravaldez">
+    <item>
+      <item>laura</item>
+      <item>valdez</item>
+    </item>
+    <tag>out="laura valdez"</tag>
+</rule>
+<rule id="laurieterlaak">
+    <item>
+      <item>laurie</item>
+      <item repeat="0-1">terlaak</item>
+    </item>
+    <tag>out="laurie terlaak"</tag>
+</rule>
+<rule id="lisamedina">
+    <item>
+      <item>lisa</item>
+      <item>medina</item>
+    </item>
+    <tag>out="lisa medina"</tag>
+</rule>
+<rule id="lisarossi">
+    <item>
+      <item>lisa</item>
+      <item repeat="0-1">rossi</item>
+    </item>
+    <tag>out="lisa rossi"</tag>
+</rule>
+<rule id="marthacole">
+    <item>
+      <item>martha</item>
+      <item repeat="0-1">cole</item>
+    </item>
+    <tag>out="martha cole"</tag>
+</rule>
+<rule id="maryalicelantz">
+    <item>
+      <item>maryalice</item>
+      <item repeat="0-1">lantz</item>
+    </item>
+    <tag>out="maryalice lantz"</tag>
+</rule>
+<rule id="michellebreaux">
+    <item>
+      <item>michelle</item>
+      <item repeat="0-1">breaux</item>
+    </item>
+    <tag>out="michelle breaux"</tag>
+</rule>
+<rule id="mikerudzki">
+    <item>
+      <item>mike</item>
+      <item repeat="0-1">rudzki</item>
+    </item>
+    <tag>out="mike rudzki"</tag>
+</rule>
+<rule id="molliekirby">
+    <item>
+      <item>mollie</item>
+      <item repeat="0-1">kirby</item>
+    </item>
+    <tag>out="mollie kirby"</tag>
+</rule>
+<rule id="morganmcgrath">
+    <item>
+      <item>morgan</item>
+      <item repeat="0-1">mcgrath</item>
+    </item>
+    <tag>out="morgan mcgrath"</tag>
+</rule>
+<rule id="nonarogers">
+    <item>
+      <item>nona</item>
+      <item repeat="0-1">rogers</item>
+    </item>
+    <tag>out="nona rogers"</tag>
+</rule>
+<rule id="obifrancekramer">
+    <item>
+      <one-of>
+        <item>obifrance</item>
+        <item>obi</item>
+      </one-of>
+      <item repeat="0-1">kramer</item>
+    </item>
+    <tag>out="obifrance kramer"</tag>
+</rule>
+<rule id="otisfields">
+    <item>
+      <item>otis</item>
+      <item repeat="0-1">fields</item>
+    </item>
+    <tag>out="otis fields"</tag>
+</rule>
+<rule id="patrickfitzgerald">
+    <item>
+      <item>patrick</item>
+      <item repeat="0-1">fitzgerald</item>
+    </item>
+    <tag>out="patrick fitzgerald"</tag>
+</rule>
+<rule id="ranitrajohnson">
+    <item>
+      <item>ranitra</item>
+      <item repeat="0-1">johnson</item>
+    </item>
+    <tag>out="ranitra johnson"</tag>
+</rule>
+<rule id="richwiethoff">
+    <item>
+      <item>rich</item>
+      <item repeat="0-1">wiethoff</item>
+    </item>
+    <tag>out="rich wiethoff"</tag>
+</rule>
+<rule id="ricodunnigan">
+    <item>
+      <item>rico</item>
+      <item repeat="0-1">dunnigan</item>
+    </item>
+    <tag>out="rico dunnigan"</tag>
+</rule>
+<rule id="robertoliason">
+    <item>
+      <item>robert</item>
+      <item repeat="0-1">oliason</item>
+    </item>
+    <tag>out="robert oliason"</tag>
+</rule>
+<rule id="robinbeger">
+    <item>
+      <item>robin</item>
+      <item repeat="0-1">beger</item>
+    </item>
+    <tag>out="robin beger"</tag>
+</rule>
+<rule id="roscoekramer">
+    <item>
+      <item>roscoe</item>
+      <item repeat="0-1">kramer</item>
+    </item>
+    <tag>out="roscoe kramer"</tag>
+</rule>
+<rule id="sarahsiller">
+    <item>
+      <item>sarah</item>
+      <item repeat="0-1">siller</item>
+    </item>
+    <tag>out="sarah siller"</tag>
+</rule>
+<rule id="seannayebioskoui">
+    <item>
+      <item>sean</item>
+      <item repeat="0-1">nayebioskoui</item>
+    </item>
+    <tag>out="sean nayebioskoui"</tag>
+</rule>
+<rule id="serenasmith">
+    <item>
+      <item>serena</item>
+      <item repeat="0-1">smith</item>
+    </item>
+    <tag>out="serena smith"</tag>
+</rule>
+<rule id="shannonmccarty">
+    <item>
+      <item>shannon</item>
+      <item repeat="0-1">mccarty</item>
+    </item>
+    <tag>out="shannon mccarty"</tag>
+</rule>
+<rule id="shelbigoodman">
+    <item>
+      <item>shelbi</item>
+      <item repeat="0-1">goodman</item>
+    </item>
+    <tag>out="shelbi goodman"</tag>
+</rule>
+<rule id="stephenmorris">
+    <item>
+      <item>stephen</item>
+      <item repeat="0-1">morris</item>
+    </item>
+    <tag>out="stephen morris"</tag>
+</rule>
+<rule id="stevebalak">
+    <item>
+      <item>steve</item>
+      <item repeat="0-1">balak</item>
+    </item>
+    <tag>out="steve balak"</tag>
+</rule>
+<rule id="sylviawilkie">
+    <item>
+      <item>sylvia</item>
+      <item repeat="0-1">wilkie</item>
+    </item>
+    <tag>out="sylvia wilkie"</tag>
+</rule>
+<rule id="teddykramer">
+    <item>
+      <item>teddy</item>
+      <item repeat="0-1">kramer</item>
+    </item>
+    <tag>out="teddy kramer"</tag>
+</rule>
+<rule id="theatrotechsupport">
+    <item>
+      <item repeat="0-1">theatro</item>
+      <item>tech support</item>
+    </item>
+    <tag>out="theatro techsupport"</tag>
+</rule>
+<rule id="trishrandall">
+    <item>
+      <item>trish</item>
+      <item repeat="0-1">randall</item>
+    </item>
+    <tag>out="trish randall"</tag>
+</rule>
+<rule id="mikemendoza">
+    <item>
+      <item>mike</item>
+      <item>mendoza</item>
+    </item>
+    <tag>out="mike mendoza"</tag>
+</rule>
+<rule id="rebeccahgarcia">
+    <item>
+      <item>rebeccah</item>
+      <item repeat="0-1">garcia</item>
+    </item>
+    <tag>out="rebeccah garcia"</tag>
+</rule>
+<rule id="cindysroufe">
+    <item>
+      <item>cindy</item>
+      <item>sroufe</item>
+    </item>
+    <tag>out="cindy sroufe"</tag>
+</rule>
+<rule id="patgasiorowski">
+    <item>
+      <item>pat</item>
+      <item repeat="0-1">gasiorowski</item>
+    </item>
+    <tag>out="pat gasiorowski"</tag>
+</rule>
+</grammar>
