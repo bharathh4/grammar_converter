@@ -5,7 +5,7 @@ DATA_DIR = 'C:\Users\TheatroIT\Documents\Scripts2\grammar_converter\sample_gramm
 def one_of_handler(element):
     print 'In one-of-handler'
     vocabs = [child.text for child in element]
-    print str(vocabs) + '\n'
+    return str(vocabs)
 
     
 def tag_handler(element):
@@ -120,4 +120,4 @@ def tester(xml_string, attrib):
     for child in new_root:
         temp = child.tag.replace(base, '') # gets ruleref from {http://www.w3.org/2001/06/grammar}ruleref
         handler_function = HANDLER_FUNCTION[temp]
-        handler_function(child)
+        print handler_function(child)
